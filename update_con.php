@@ -11,7 +11,7 @@
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
     ?>
-    <form action="table.php" method="post">
+    <form action="." method="post">
         <button type="submit">กลับไปหน้าหลัก</button>
 </form>
 <?php

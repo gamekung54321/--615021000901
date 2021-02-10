@@ -6,7 +6,7 @@
         $row = $result->fetch_assoc();
     }
 ?>
-<h3>แก้ไขรายการภาพยนต์ <small><a href="table.php">กลับไปหน้าหลัก</a></h3>
+<h3>แก้ไขรายการภาพยนต์ <small><a href="table1.php">กลับไปหน้าหลัก</a></h3>
 
 <form action="update_con.php" method="post">
     <label for="movie_id">รหัสภาพยนต์ : </label>

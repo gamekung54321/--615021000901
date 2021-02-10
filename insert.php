@@ -25,4 +25,4 @@
     <br>
     <button type="submit">ยืนยัน</button>
 </form>
-<a href="table.php">กลับไปหน้าหลัก</a>
+<a href="table1.php">กลับไปหน้าหลัก</a>
