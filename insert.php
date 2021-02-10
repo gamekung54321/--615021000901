@@ -25,6 +25,4 @@
     <br>
     <button type="submit">ยืนยัน</button>
 </form>
-<form action="table.php" method="post">
-    <button type="submit">หน้ารายการภาพยนต์</button>
-</form>
+<a href="table.php">กลับไปหน้าหลัก</a>

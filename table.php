@@ -37,6 +37,7 @@
         <td><?php echo $row['movie_name']; ?></td>
         <td align="center"><?php echo $row['movie_date']; ?></td>
         <td align="center">
+            <a href="update.php?id=<?php echo $row['movie_id']; ?>">แก้ไข</a>
             <a href="?delete=1&id=<?php echo $row['movie_id']; ?>">ลบ</a>
         </td>
     </tr>
