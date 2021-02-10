@@ -1,5 +1,13 @@
 <?php
     require_once("dbcon.php");
+    if(isset($_GET['delete'])) {
+        $sql = "DELETE FROM movie WHERE movie_id = '{$_GET['id']}'";
+        if (mysqli_query($conn, $sql)) {
+            echo "Record deleted successfully";
+        } else {
+            echo "Error deleting record: " . mysqli_error($conn);
+        }
+    }
     $sql = "SELECT * FROM movie";
     if(isset($_GET['search_click'])) {
         $sql = "SELECT * FROM movie WHERE movie_id LIKE '%{$_GET['search']}%' OR movie_name LIKE '%{$_GET['search']}%'";
@@ -18,6 +26,7 @@
         <th>รหัสภาพยนต์</th>
         <th>ชื่อภาพยนต์</th>
         <th>วันที่เริ่มฉาย</th>
+        <th>เครื่องมือ</th>
     </tr>
 <?php
     if($result->num_rows > 0) {
@@ -26,7 +35,10 @@
     <tr>
         <td><?php echo $row['movie_id']; ?></td>
         <td><?php echo $row['movie_name']; ?></td>
-        <td><?php echo $row['movie_date']; ?></td>
+        <td align="center"><?php echo $row['movie_date']; ?></td>
+        <td align="center">
+            <a href="?delete=1&id=<?php echo $row['movie_id']; ?>">ลบ</a>
+        </td>
     </tr>
 <?php
         }
